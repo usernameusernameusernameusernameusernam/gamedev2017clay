@@ -1,0 +1,25 @@
+<h2 align=center> Javascript by Clay</h2>
+
+Enter your name:<input id="myText01" type=text value=clay>
+<input type=button value="click me" onclick="{
+ 
+ document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+
+}" >
+
+<input type=button value="x²" onclick="{
+ 
+ document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value * document.getElementById('myText01').value
+
+}" >
+
+<input type=button value="x³" onclick="{
+ 
+ document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value * document.getElementById('myText01').value * document.getElementById('myText01').value
+
+}" >
+
+
+
+
+<div id="myDiv01" style="font-size:40px;"> Writing here</div>

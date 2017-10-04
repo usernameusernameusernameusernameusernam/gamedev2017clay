@@ -1,0 +1,17 @@
+<h2 align=center>t1a05-if-clay</h2>
+enter a number:
+<input id="myText01" type=number value=7> Try 7,2,10,11,5,-1
+<div id="myDiv01" style="font-size:40px;color:red;">I'm waiting.</div>
+<input type=button value="First" onClick="{
+ myNumber= document.getElementById('myText01').value
+ document.getElementById('myDiv01').innerHTML = ''
+if (myNumber ==7) {document.getElementById('myDiv01').innerHTML += 'You entered a 7<br>'}
+if (myNumber  <9) {document.getElementById('myDiv01').innerHTML += 'Less than 9<br>'}
+if (myNumber  <3) {document.getElementById('myDiv01').innerHTML += 'Less than 3<br>'}
+if (myNumber <=10) {document.getElementById('myDiv01').innerHTML += 'Equal to or greater than 10<br>'}
+if (myNumber >10) {document.getElementById('myDiv01').innerHTML += 'Greater than 10<br>'}
+if (myNumber >=5) {document.getElementById('myDiv01').innerHTML += 'Equal to or less than 5<br>'}
+if (myNumber  <0) {document.getElementById('myDiv01').innerHTML += 'Negative number<br>'}
+
+
+}">
