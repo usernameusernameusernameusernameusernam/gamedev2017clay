@@ -1,0 +1,73 @@
+<script>
+
+function cancel() {
+document.getElementById('firstNumber').value = null;
+document.getElementById('secondNumber').value = null;
+document.getElementById('thirdNumber').value = null;
+document.getElementById('answer').value = null;
+document.getElementById('secondAnswer').value = null;
+document.getElementById('thirdAnswer').value = null;
+}
+
+
+
+function equation() {
+var a = document.getElementById('firstNumber').value;
+var b = document.getElementById('secondNumber').value;
+var c = document.getElementById('thirdNumber').value;
+var discr = (b * b) - 4 * (a * c);
+var sqrDiscr = Math.sqrt(discr);
+
+
+document.getElementById('answer').value = discr;
+if ((a == 0 ) &&( b == 0 ) && (c == 0)){
+   document.getElementById('secondAnswer').value = "Something went wrong!";
+} else if (discr < 0){
+   document.getElementById('secondAnswer').value = "There is no solution to this equation";
+   document.getElementById('thirdAnswer').value = "-";
+   }else if (discr == 0){
+      document.getElementById('secondAnswer').value = "This equation can have one root";
+      document.getElementById('thirdAnswer').value = ((- b - sqrDiscr) / (2 * a));
+      }else if (discr > 0){
+         document.getElementById('secondAnswer').value = "There can be two roots of this equation";
+         document.getElementById('thirdAnswer').value = ((- b + sqrDiscr) / (2 * a)) + ";     " + ((- b - sqrDiscr) / (2 * a));
+     }
+}
+
+
+
+</script>
+
+
+
+For the special case where y=0 The quatractic equation is very useful<br>
+
+0 = 
+<input id="firstNumber" type="text" size="2" value=1></input>
+   x<sup>2</sup>   +
+<input id="secondNumber" type="text" size="2" value="3"></input>
+  x +
+<input id="thirdNumber" type="text" size="2" value="1"></input>  
+
+
+(Enter coefficients)</br></br>
+<input id="count" type="button" value="Quadratic Formula" onclick="equation()"></input></br></br>
+
+<a>Discriminant is </a><input id="answer" type="text" size="5" readonly="readonly"></input> 
+if < 0 no solution, = 0 one solution, > 0 two solutions </br></br>
+
+<a>Hints </a></br><input id="secondAnswer" type="text" size="60" readonly="readonly"></input></input></br></br>
+
+<a>Roots</a></br><input id="thirdAnswer" type="text" readonly="readonly" style="width:100%"></input></br><br>
+<input type="button" value="Clear" onclick="cancel()"></input><br><br>
+
+
+
+What can we do if y does not equal zero?<br>
+We could just try to solve the equation<br>
+Write a program to solve the quadratic equation for y given x and <br>
+y=ax<sup>2</sup> + bx + c using any coefficients (should output "Can't be solved" on any errors)<br>
+<br>
+x = <input type=text id=myX value=4 size=3><br>
+y = <input type=text id=myY value=3 size=3>x<sup>2</sup> + <input type=text value=2 size=3>x+<input type=text value=1 size=3><br><br>
+<input type=button value="Solve"> Your answer (or errors) <div >y=</div>
