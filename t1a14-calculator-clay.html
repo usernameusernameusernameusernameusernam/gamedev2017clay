@@ -1,0 +1,48 @@
+<h2 align=center>Calculator by Clay</h2>
+
+<input id="myText01"  type=text value="4"  > 
+<input id="myText02"  type=text value="+"  > 
+<input id="myText03"  type=text value="4"  > <br>
+
+<input type=button value=" Answer = " onClick="{  
+   myNum1 = parseFloat(document.getElementById('myText01').value)
+   mySign = document.getElementById('myText02').value
+   myNum3 = parseFloat(document.getElementById('myText03').value)
+ 
+    myTotal = 0
+
+    if (mySign == '+'){
+      myTotal = myNum1 + myNum3
+   }
+
+    if (mySign == '*'){
+      myTotal = myNum1 * myNum3
+   }
+   
+    if (mySign == '-'){
+      myTotal = myNum1 - myNum3
+   }
+   
+    if (mySign == '/'){
+      myTotal = myNum1 / myNum3
+   }
+
+
+
+
+
+
+      document.getElementById('myDiv01').innerHTML = myNum1 +' '+mySign + ' '+ myNum3 +' = '+ myTotal + '<br>' +document.getElementById('myDiv01').innerHTML
+
+
+}" >
+
+
+<input type=button value="Reset" onClick="{  
+    document.getElementById('myText01').value =  '' 
+    document.getElementById('myText02').value =  '' 
+    document.getElementById('myText03').value =  '' 
+    document.getElementById('myDiv01').innerHTML =  '' 
+}" >
+
+<div id="myDiv01">....<br></div>
