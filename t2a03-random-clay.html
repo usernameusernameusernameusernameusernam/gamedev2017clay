@@ -1,0 +1,24 @@
+<input type=button value="Random Go" onclick="{
+       myX = 0
+       myY = 0
+       myCounter1 = setInterval(function(){   
+             myX = Math.floor(Math.random() * 6 -3)
+             myY = Math.floor(Math.random() * 6 -3)
+            document.getElementById('myImage01')
+.style.left =  parseInt(document.getElementById('myImage01')
+.style.left) + myX +'px'
+            document.getElementById('myImage01')
+.style.top =  parseInt(document.getElementById('myImage01')
+.style.top) + myY +'px'
+      
+            if (parseInt(document.getElementById('myImage01')
+.style.left) <= 0 ){document.getElementById('myImage01')
+.style.left = '10px'} 
+         
+             // you do the other sides   
+
+  }, 30);    // every 30 milliseconds
+
+}">
+
+<img id="myImage01" src="myNot2.png" style="position : absolute; top:0; left:10; width:30; height:40;">
