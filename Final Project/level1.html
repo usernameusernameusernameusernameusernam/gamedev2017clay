@@ -70,14 +70,17 @@ function myCollide(my1, my2){
 
    if (myCollide('myA', 'myC')  == true) {
       document.getElementById('myOut01').innerHTML =  'oh no, you hit a BOT'
+      document.getElementById('myC').style.left   = '-200px'
    }
 
    if (myCollide('myA', 'myD')  == true) {
       document.getElementById('myOut01').innerHTML =  'oh no, you hit a PARKING LOT'
+      document.getElementById('myD').style.left   = '-200px'
    }
 
    if (myCollide('myA', 'myE')  == true) {
       document.getElementById('myOut01').innerHTML =  'oh no, you hit a KNOT'
+      document.getElementById('myE').style.left   = '-200px'
    }
                  
    if (  document.getElementById('myB').style.left   == '-200px' ){
